@@ -4,8 +4,7 @@
 \alias{topRank}
 \title{Identify features with the highest influence on clustering.}
 \usage{
-topRank(matrix, n = 25, margin = 2, threshold = 0,
-  decreasing = TRUE)
+topRank(matrix, n = 25, margin = 2, threshold = 0, decreasing = TRUE)
 }
 \arguments{
 \item{matrix}{Numeric matrix.}
@@ -18,7 +17,7 @@ columns. Default 2.}
 
 \item{threshold}{Numeric. Only return ranked rows or columns in the matrix
 that are above this threshold. If NULL, then no threshold will be applied.
-Default 1.}
+Default 0.}
 
 \item{decreasing}{Logical. Specifies if the rank should be decreasing.
 Default TRUE.}

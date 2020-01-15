@@ -4,12 +4,25 @@
 \alias{celda_C}
 \title{Cell clustering with Celda}
 \usage{
-celda_C(counts, sampleLabel = NULL, K, alpha = 1, beta = 1,
-  algorithm = c("EM", "Gibbs"), stopIter = 10, maxIter = 200,
-  splitOnIter = 10, splitOnLast = TRUE, seed = 12345, nchains = 3,
+celda_C(
+  counts,
+  sampleLabel = NULL,
+  K,
+  alpha = 1,
+  beta = 1,
+  algorithm = c("EM", "Gibbs"),
+  stopIter = 10,
+  maxIter = 200,
+  splitOnIter = 10,
+  splitOnLast = TRUE,
+  seed = 12345,
+  nchains = 3,
   zInitialize = c("split", "random", "predefined"),
-  countChecksum = NULL, zInit = NULL, logfile = NULL,
-  verbose = TRUE)
+  countChecksum = NULL,
+  zInit = NULL,
+  logfile = NULL,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{counts}{Integer matrix. Rows represent features and columns represent
@@ -75,7 +88,7 @@ can only be used when `initialize = 'random'`. Default NULL.}
 }
 \value{
 An object of class `celda_C` with the cell population clusters
- stored in in `z`.
+ stored in `z`.
 }
 \description{
 Clusters the columns of a count matrix containing single-cell

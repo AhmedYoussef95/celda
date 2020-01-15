@@ -4,14 +4,30 @@
 \alias{celda_CG}
 \title{Cell and feature clustering with Celda}
 \usage{
-celda_CG(counts, sampleLabel = NULL, K, L, alpha = 1, beta = 1,
-  delta = 1, gamma = 1, algorithm = c("EM", "Gibbs"),
-  stopIter = 10, maxIter = 200, splitOnIter = 10,
-  splitOnLast = TRUE, seed = 12345, nchains = 3,
+celda_CG(
+  counts,
+  sampleLabel = NULL,
+  K,
+  L,
+  alpha = 1,
+  beta = 1,
+  delta = 1,
+  gamma = 1,
+  algorithm = c("EM", "Gibbs"),
+  stopIter = 10,
+  maxIter = 200,
+  splitOnIter = 10,
+  splitOnLast = TRUE,
+  seed = 12345,
+  nchains = 3,
   zInitialize = c("split", "random", "predefined"),
   yInitialize = c("split", "random", "predefined"),
-  countChecksum = NULL, zInit = NULL, yInit = NULL, logfile = NULL,
-  verbose = TRUE)
+  countChecksum = NULL,
+  zInit = NULL,
+  yInit = NULL,
+  logfile = NULL,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{counts}{Integer matrix. Rows represent features and columns represent
@@ -94,7 +110,7 @@ starting values for each feature will be randomly sampled from 1:L.
 }
 \value{
 An object of class `celda_CG` with the cell populations clusters
- stored in in `z` and feature module clusters stored in `y`.
+ stored in `z` and feature module clusters stored in `y`.
 }
 \description{
 Clusters the rows and columns of a count matrix containing
